@@ -13,14 +13,14 @@ public class StudentEntity{
     @Id
     @GeneratedValue(stragey=GenerativeType.IDENTITY)
     private String name;
-    private String id;
+    private Integer id;
     private String email;
-    private String created;
+    private Date created;
     public String getCreated()
     {
         return created;
     }
-    public void setCreated(date created)
+    public void setCreated(Date created)
     {
         this.created=created;
     }
