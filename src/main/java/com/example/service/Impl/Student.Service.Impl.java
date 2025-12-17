@@ -12,6 +12,9 @@ public class StudentServiceImpl implements StudentService  {
      //deleteById();
      //existsById();
      @Override
+
+
+     
     public StudentEntity postData(StudentEntity stu){
         return student.return.save(stu);
     }
