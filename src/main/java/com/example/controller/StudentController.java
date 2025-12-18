@@ -26,6 +26,13 @@ public class StudentController{
     public String deleteval(@PathVariable int id){
         return ser.DeleteData(id);
     }
+    @GetMapping("/getid/{id}")
+    public StudentEntity putval(@PathVariable int id){
+        return service.getData(id);
+    }
+    @PutMapping("/put/{id}")
+    public StudentEntity putval(@PathVariable int id,@RequestBody StudentEntity entity){
+    return service.updateData(id,entity);
 }
 
-
+}
