@@ -8,7 +8,7 @@ import com.example.demo.entity.StudentEntity;
 
 
 @Service
-public class StudentServiceimpl implements StudentService{
+public class StudentServiceImpl implements StudentService{
         
     @Autowired StudentRepository student;
     // save,findAll(),findById(),deleteId(),existsById()
