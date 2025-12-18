@@ -29,5 +29,15 @@ public class StudentServiceImpl implements StudentService{
             return "Delete Successfully";
     
     }
-
+@Override
+public StudentEntity getData(int id){
+    return student.fundById(id).orElse(null);
 }
+!Override
+public StudentEntity updateDate(int id,StudentEntity entity){
+    if(student.existingBy(id)){
+        
+    }
+}
+}
+               
