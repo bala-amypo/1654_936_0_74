@@ -19,7 +19,7 @@ public class StudentController{
         return ser.getAllData();
     }
     @DeleteMapping("/delete/{id}")
-    public String deleteval(){
+    public String deleteval(@PathVariable){
         return service.
     }
 }
