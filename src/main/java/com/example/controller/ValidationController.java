@@ -1,4 +1,3 @@
-
 package com.example.demo.controller;
 import java.util.*;
 import org.springframework.web.bind.annotation.RestController;
@@ -11,9 +10,9 @@ import com.example.demo.service.ValidationService;
 import jakarta.validation.Valid;
 @RestController
 public class ValidationController{
-    @Autowired ValidationService serve;
+    @Autowired ValidationService service;
     @PostMapping("/data")
     public ValidationEntity sendData(@Valid @RequestBody ValidationEntity stu){
-        return serve.post(stu);
+        return service.post(stu);
     }
 }
