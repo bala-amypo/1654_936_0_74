@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import com.example.demo.entity.Studententity;
+import com.example.demo.entity.StudentEntity;
 import com.example.demo.service.StudentService;
 import java.util.List;
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class StudentController{
     @Autowired StudentService ser;
     @PostMapping("/post")
-    public Studententity sendData(@RequestBody StudentEntity entity){
+    public StudentEntity sendData(@RequestBody StudentEntity entity){
             return ser.postdata(entity);
     }
     @GetMapping("/Get")
