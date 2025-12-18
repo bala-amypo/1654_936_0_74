@@ -20,8 +20,8 @@ private Long id;
     @Max(6)
     @NotNull(message = "Password is mandatory")
     private String password;
-
     @Max(30)
+    @Positive(message = "Age must be a positive number")
     private int age;
 
 }
