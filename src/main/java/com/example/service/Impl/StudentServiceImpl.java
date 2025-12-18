@@ -33,7 +33,7 @@ public class StudentServiceImpl implements StudentService{
 public StudentEntity getData(int id){
     return student.fundById(id).orElse(null);
 }
-!Override
+@Override
 public StudentEntity updateDate(int id,StudentEntity entity){
     if(student.existingBy(id)){
         entity.setId(id);
