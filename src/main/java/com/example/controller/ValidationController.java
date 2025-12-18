@@ -10,9 +10,9 @@ import com.example.demo.service.ValidationService;
 import jakarta.validation.Valid;
 @RestController
 public class ValidationController{
-    @Autowired ValidationService service;
+    @Autowired ValidationService serve;
     @PostMapping("/data")
     public ValidationEntity sendData(@Valid @RequestBody ValidationEntity stu){
-        return service.post(stu);
+        return serve.post(stu);
     }
 }
