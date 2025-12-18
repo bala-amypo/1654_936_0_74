@@ -17,8 +17,11 @@ private Long id;
     private String username;
     @Email(message = "Email is not valid")
     private String email;
-    
+    @Max(6)
+    @NotNull(message = "Password is mandatory")
     private String password;
+
+    @Max(30)
     private int age;
 
 }
