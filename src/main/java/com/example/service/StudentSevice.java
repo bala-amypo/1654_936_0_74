@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.entity.StudentService
+import com.example.demo.entity.StudentService;
 
 public interface StudentService{
 
