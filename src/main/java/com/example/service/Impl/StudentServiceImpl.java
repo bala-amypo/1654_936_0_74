@@ -7,9 +7,6 @@ import com.example.demo.repository.StudentRepository;
 import com.example.demo.entity.StudentEntity;
 import java.util.List;
 
-
-
-
 @Service
 public class StudentServiceImpl implements StudentService{
         
@@ -26,20 +23,21 @@ public class StudentServiceImpl implements StudentService{
     @Override
     public String DeleteData(int id){
             student.deleteById(id);
-            return "Delete Successfully";
+            return "Delete Successfully";            
     
     }
-@Override
-public StudentEntity getData(int id){
-    return student.fundById(id).orElse(null);
+    @Override
+    public Studententity getData(int id){
+        return student.findById(id).orElse(null);
+
+    }
+    @Override
+    public Studententity updateData(int id,Studententity entity){
+         if(student.existsById(id)){
+            entity.setID(id);
+            return student.save(entity);
+         }
+         return null;
+    }
+
 }
-@Override
-public StudentEntity updateDate(int id,StudentEntity entity){
-    if(student.existingBy(id)){
-        entity.setId(id);
-        return student.save(entity);
-    }          
-    return null;
-}
-}
-               
